@@ -1,23 +1,23 @@
 // ADD NEW ITEM TO END OF LIST
-var firstItem = document.createElement('li');
-var firstItemText = document.createTextNode('cream');
-firstItem.appendChild(firstItemText);
-
-var myList = document.getElementsByTagName('ul')[0];
-myList.appendChild(firstItem);
-
-// ADD NEW ITEM START OF LIST
 var lastItem = document.createElement('li');
-var lastItemText = document.createTextNode('kale');
+var lastItemText = document.createTextNode('cream');
 lastItem.appendChild(lastItemText);
 
-myList.insertBefore(lastItem, myList.firstChild);
+var myList = document.getElementsByTagName('ul')[0];
+myList.appendChild(lastItem);
+
+// ADD NEW ITEM START OF LIST
+var firstItem = document.createElement('li');
+var firstItemText = document.createTextNode('kale');
+firstItem.appendChild(firstItemText);
+
+myList.insertBefore(firstItem, myList.firstChild);
 
 // ADD A CLASS OF COOL TO ALL LIST ITEMS
 var myListItems = document.getElementsByTagName('li');
 var i = 0;
 
-for(i = 0; i < myListItems.length; i++) {
+for (i = 0; i < myListItems.length; i++) {
     myListItems[i].setAttribute('class', 'cool');
 }
 
